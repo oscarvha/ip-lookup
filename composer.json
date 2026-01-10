@@ -1,0 +1,44 @@
+{
+    "name": "osd/ip-lookup",
+    "description": "Get IP geolocation data from OSD IP Lookup microservice",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "require": {
+        "php": "^8.1",
+        "symfony/uid": "^8.0",
+        "guzzlehttp/guzzle": "^7.10"
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.3",
+        "phpunit/phpunit": "^12.5",
+        "mockery/mockery": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+
+            "Osd\\IpLookup\\": "src/"
+
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Osd\\IpLookup\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Oscar Sanchez <oscarsoftwaredeveloper@gmail.com>"
+        }
+    ],
+
+    "scripts": {
+        "test": "vendor/bin/pest"
+    },
+
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
