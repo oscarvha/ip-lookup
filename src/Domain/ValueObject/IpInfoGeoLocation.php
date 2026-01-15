@@ -75,11 +75,11 @@ final class IpInfoGeoLocation
     public static function fromArray(mixed $geoLocation):self
     {
         return new self(
-            $geoLocation['city'],
-            $geoLocation['country'],
-            $geoLocation['timezone'],
-            (float)$geoLocation['latitude'],
-            (float)$geoLocation['longitude']
+            $geoLocation['city'] ?? 'Not found',
+            $geoLocation['country'] ?? 'Not found',
+            $geoLocation['timezone'] ?? 'Not found',
+            (float)$geoLocation['latitude'] ?? 0.0,
+            (float)$geoLocation['longitude'] ?? 0.0
         );
     }
 }
